@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Este reto consiste en implementar un sistema de encriptación y desencriptación de mensajes. Tu tarea es crear un programa que pueda cifrar un texto claro y luego descifrar el texto cifrado para recuperar el mensaje original.">
+        <meta name="author" content="Galoget Latorre">
+        <meta name="keywords" content="encriptación, desencriptación, criptografía, reto, programación, JavaScript, HTML, CSS, Alura, Oracle ONE">
+        <meta name="robots" content="index, follow">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="img/alura_logo.svg" type="image/svg+xml">
+        <title>Reto Encriptador - Alura [Oracle ONE G7]</title>
+    </head>
+
+    <body>
+        <main class="main">
+            <div class="logo">
+                <img src="img/alura_logo.svg" alt="Alura Logo">
+            </div>
+            <div class="container">
+                <div class="input_text">
+                    <textarea class="input_text_encrypt" id="input_text_encrypt" placeholder="Ingresa el texto aquí"></textarea>
+                    <div class="bottom">
+                        <small><img src="./img/icon.svg"> Solo letras minúsculas y sin acentos (tildes).</small>
+                        <div class="buttons">
+                            <button class="button button_encrypt" id="button_encrypt">Cifrar (Encrypt)</button>
+                            <button class="button button_decrypt"id="button_decrypt">Descifrar (Decrypt)</button>
+                        </div>
+                    </div>
+                </div>        
+            </div>
+            <div class="output_text" id="output_text">
+                <div class="result no_text">
+                    <div class="no_output">
+                        <img id="no_message_person" class="" src="img/no_message_person.svg" alt="no_message_person">
+                        <h2>¡Ningún mensaje fue encontrado!</h2>
+                        <p>Ingresa el texto que deseas cifrar (encrypt) o descifrar (decrypt)</p>
+                    </div>
+                    <div class="result_output">
+                        <textarea class="output_text_decrypt" id="output_text_decrypt" ></textarea>
+                        <button class="button button_decrypt button_copy"id="button_copy">Copiar</button>
+                    </div>
+                </div>
+            </div>
+           
+        </main>
+        <footer class="footer-distributed">
+			<div class="footer-left">
+				<h3>Reto Encriptador - <span>Alura</span></h3>
+				<p class="footer-company-name">Galoget Latorre © 2024 - Challenge 1</p>
+
+				<div class="footer-icons">
+                    <a href="https://linkedin.com/in/galoget" target="_blank"><i class="fa fa-linkedin"></i></a>
+					<a href="https://t.me/galoget" target="_blank"><i class="fa fa-telegram"></i></a>
+					<a href="https://github.com/galoget" target="_blank"><i class="fa fa-github"></i></a>
+
+				</div>
+			</div>
+
+			<div class="footer-right">
+                <h3>Oracle ONE <span>G7</span></h3>
+			</div>
+
+		</footer>
+        
+        <script src="scripts.js"> </script>
+        
+        <div id="custom-alert"></div>
+    </body>
+</html>

@@ -1,0 +1,578 @@
+/* General Styles */
+body {
+    background-color: #F3F5FC; /* Fondo claro para toda la página */
+    font-family: 'Inter', sans-serif; /* Tipografía general */
+}
+
+/* Main Section Styles */
+.main {
+    display: flex;
+    flex-direction: row; /* Alineación en fila */
+    max-height: 80vh; /* Altura máxima de la sección principal */
+    position: relative;
+    min-height: 90vh; /* Altura mínima para la sección principal */
+}
+
+/* Logo Styles */
+main .logo {
+    width: 10vh; /* Ancho del contenedor del logo */
+    display: flex;
+    justify-content: center; /* Centrando el contenido horizontalmente */
+    align-items: flex-start; /* Alineando el contenido al principio del contenedor */
+    padding-top: 2em; /* Espaciado superior del logo */
+}
+
+main .logo img {
+    width: 2em; /* Tamaño del logo */
+}
+
+/* Container Styles */
+main .container {
+    border: transparent; /* Sin borde para el contenedor */
+    width: 50vw; /* Ancho del contenedor */
+    padding-top: 15vh; /* Espaciado superior del contenedor */
+    display: flex;
+    justify-content: center; /* Centrando el contenido horizontalmente */
+}
+
+main .container .input_text {
+    width: 70%; /* Ancho del contenedor de texto */
+    display: flex;
+    flex-direction: column; /* Alineación en columna */
+}
+
+main .container .input_text textarea {
+    width: 100%; /* Ancho completo del área de texto */
+    height: 90%; /* Altura del área de texto */
+    resize: none; /* Deshabilita el redimensionamiento */
+    background: transparent; /* Fondo transparente */
+    border: none; /* Sin borde */
+    color: #0A3871; /* Color del texto */
+    font-weight: 400; /* Peso de la fuente */
+    font-size: 2em; /* Tamaño de la fuente */
+    padding: 0; /* Sin padding */
+}
+
+main .container .input_text textarea::placeholder {
+    color: #0A3871; /* Color del texto del placeholder */
+}
+
+main .container .input_text textarea:focus {
+    outline: none; /* Elimina el contorno por defecto al enfocar */
+}
+
+main .container .bottom {
+    display: flex;
+    flex-direction: column; /* Alineación en columna */
+    gap: 1em; /* Espaciado entre elementos */
+    padding-top: 1em; /* Espaciado superior */
+}
+
+/* Output Text Styles */
+main .output_text {
+    width: 40vw; /* Ancho del contenedor de salida */
+    display: flex;
+    justify-content: center; /* Centrando el contenido horizontalmente */
+    align-items: center; /* Centrando el contenido verticalmente */
+    margin-top: 3em; /* Espaciado superior */
+}
+
+.output_text .result {
+    background-color: #FFFF; /* Fondo blanco para el resultado */
+    height: 80vh; /* Altura del contenedor de resultados */
+    width: 75%; /* Ancho del contenedor de resultados */
+    border-radius: 2em; /* Bordes redondeados */
+    display: flex;
+    justify-content: center; /* Centrando el contenido horizontalmente */
+    align-items: center; /* Centrando el contenido verticalmente */
+    box-shadow: 0em 0em 2em 0.1em #00000031; /* Sombra del contenedor */
+}
+
+.result .no_output {
+    color: #0A3871; /* Color del texto cuando no hay salida */
+    font-weight: 700; /* Peso de la fuente */
+    text-align: center; /* Centrar el texto */
+    height: 90%; /* Altura del contenedor sin salida */
+    flex-direction: column; /* Alineación en columna */
+    justify-content: center; /* Centrar verticalmente el contenido */
+    align-items: center; /* Centrar horizontalmente el contenido */
+}
+
+.result .result_output {
+    display: flex;
+    flex-direction: column; /* Alineación en columna */
+    justify-content: space-between; /* Espaciado uniforme entre elementos */
+    height: 100%; /* Altura completa */
+}
+
+.result .result_output button {
+    margin-bottom: 2em; /* Espaciado inferior del botón */
+}
+
+.result .result_output .output_text_decrypt {
+    height: 100%; /* Altura completa del área de texto de descifrado */
+    width: 100%; /* Ancho completo */
+    margin-top: 1em; /* Espaciado superior */
+    resize: none; /* Deshabilita el redimensionamiento */
+    background: transparent; /* Fondo transparente */
+    border: none; /* Sin borde */
+    color: #0A3871; /* Color del texto */
+    font-weight: 400; /* Peso de la fuente */
+    font-size: 2em; /* Tamaño de la fuente */
+}
+
+.result .result_output .output_text_decrypt:focus {
+    outline: none; /* Elimina el contorno por defecto al enfocar */
+}
+
+.result .no_output img {
+    width: 100%; /* Ancho completo para la imagen de no salida */
+}
+
+main .result .no_output,
+main .result .result_output {
+    padding: 2em; /* Espaciado interno */
+}
+
+/* Button Styles */
+main .buttons {
+    display: flex;
+    flex-direction: row; /* Alineación en fila */
+    gap: 1em; /* Espaciado entre botones */
+}
+
+main .button {
+    padding: 1em; /* Espaciado interno del botón */
+    width: 100%; /* Ancho completo */
+    border-radius: 1em; /* Bordes redondeados */
+    border: 2px solid #0A3871; /* Borde del botón */
+    transition: border-color 250ms, background-color 250ms; /* Transición suave */
+}
+
+main .button:hover,
+.footer-distributed .button_enviar:hover {
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+main .button.button_encrypt {
+    background: #0A3871; /* Fondo azul para el botón de cifrado */
+    color: white; /* Texto blanco */
+    font-weight: 500; /* Peso de la fuente */
+}
+
+main .button.button_encrypt:hover {
+    background-color: #4576b1; /* Cambio de color en hover */
+    border-color: #4576b1; /* Cambio de color del borde en hover */
+}
+
+main .button.button_decrypt {
+    background: transparent; /* Fondo transparente para el botón de descifrado */
+    color: #0A3871; /* Texto azul */
+    font-weight: 500; /* Peso de la fuente */
+}
+
+main .button.button_decrypt:hover {
+    background-color: #dde2e8; /* Cambio de color en hover */
+}
+
+/* Bottom Section Styles */
+main .bottom small {
+    color: #495057; /* Color del texto pequeño */
+    font-weight: 500; /* Peso de la fuente */
+    display: flex;
+    align-items: end; /* Alineación al final del contenedor */
+}
+
+main .bottom small img {
+    padding-right: 0.25em; /* Espaciado derecho de la imagen */
+}
+
+/* Conditional Display for Results */
+.result.no_text .result_output {
+    display: none; /* Oculta el resultado si no hay texto */
+}
+
+.result:not(.no_text) .result_output {
+    display: flex; /* Muestra el resultado si hay texto */
+}
+
+.result.no_text .no_output {
+    display: flex; /* Muestra la sección de "no hay salida" si no hay texto */
+}
+
+.result:not(.no_text) .no_output {
+    display: none; /* Oculta la sección de "no hay salida" si hay texto */
+}
+
+/* Footer Styles */
+.footer-distributed {
+    background: #0A3871; /* Fondo azul oscuro */
+    box-shadow: 0em 0em 2em 0.1em #00000031; /* Sombra */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+    width: 100%; /* Ancho completo */
+    font: bold 16px sans-serif; /* Fuente del pie de página */
+    text-align: left; /* Alineación del texto a la izquierda */
+    margin-top: 2vh; /* Espaciado superior */
+    padding: 1em 4em 0.5em; /* Espaciado interno */
+    overflow: hidden; /* Oculta el contenido desbordado */
+}
+
+section {
+    width: 100%; /* Ancho completo */
+    display: inline-block; /* Alineación en línea */
+    background: #ccc; /* Fondo gris claro */
+    height: 60vh; /* Altura del contenedor */
+    text-align: center; /* Alineación del texto al centro */
+    font-size: 22px; /* Tamaño de la fuente */
+    font-weight: 700; /* Peso de la fuente */
+    text-decoration: underline; /* Subrayado del texto */
+}
+
+/* Footer Left Side */
+.footer-distributed .footer-left {
+    float: left; /* Alineación a la izquierda */
+}
+
+/* Alura Logo */
+.footer-distributed h3 {
+    color: #ffffff; /* Color del texto del logo */
+    font: normal 36px 'Roboto', cursive; /* Fuente del logo */
+    margin: 0 0 1vh; /* Margen inferior */
+}
+
+.footer-distributed h3 span {
+    color: #5383d3; /* Color del texto resaltado */
+}
+
+/* Footer Links */
+.footer-distributed .footer-links {
+    color: #ffffff; /* Color de los enlaces */
+    margin: 0 0 10px; /* Margen inferior */
+    padding: 0; /* Sin padding */
+}
+
+.footer-distributed .footer-links a {
+    display: inline-block; /* Alineación en línea */
+    line-height: 1.8em; /* Altura de línea */
+    text-decoration: none; /* Sin subrayado */
+    color: inherit; /* Hereda el color del contenedor */
+}
+
+.footer-distributed .footer-company-name {
+    color: #8f9296; /* Color del nombre de la empresa */
+    font-size: 14px; /* Tamaño de la fuente */
+    font-weight: normal; /* Peso de la fuente */
+    margin: 0; /* Sin margen */
+}
+
+/* Footer Social Icons */
+.footer-distributed .footer-icons {
+    margin-top: 1.5em; /* Margen superior */
+}
+
+.footer-distributed .footer-icons a {
+    display: inline-block; /* Alineación en línea */
+    width: 20%; /* Ancho de los íconos */
+    cursor: pointer; /* Cursor de puntero */
+    background-color: #F3F5FC; /* Fondo claro */
+    border-radius: 0.1em; /* Bordes redondeados */
+    align-items: center; /* Alineación del contenido */
+    font-size: 150%; /* Tamaño de la fuente */
+    color: #0A3871; /* Color del texto */
+    text-align: center; /* Alineación del texto al centro */
+    padding: 0.2em; /* Espaciado interno */
+    margin: 0 0.1em 0.1em 0; /* Espaciado entre íconos */
+}
+
+/* Footer Right Side */
+.footer-distributed .footer-right {
+    float: right; /* Alineación a la derecha */
+}
+
+.footer-distributed .footer-right p {
+    display: inline-block; /* Alineación en línea */
+    vertical-align: top; /* Alineación vertical */
+    margin: 1.25em 2.5em 0 0; /* Margen */
+    color: #ffffff; /* Color del texto */
+}
+
+/* Placeholder Styles */
+.footer-distributed ::placeholder {
+    color: #4576b1; /* Color del texto del placeholder */
+}
+
+.footer-distributed input {
+    height: 1vh; /* Altura del campo de entrada */
+    margin: 0.5em 0; /* Margen */
+}
+
+.footer-distributed textarea {
+    height: 20%; /* Altura del área de texto */
+    margin-bottom: 1vh; /* Margen inferior */
+}
+
+/* Send Button Style */
+.footer-distributed .button_enviar {
+    float: right; /* Alineación a la derecha */
+    background: #F3F5FC; /* Fondo claro */
+    color: #0A3871; /* Color del texto */
+    font-size: 14px; /* Tamaño de la fuente */
+    font-weight: bold; /* Peso de la fuente */
+    width: 50%; /* Ancho del botón */
+    border-radius: 0.5em; /* Bordes redondeados */
+    border: none; /* Sin borde */
+    padding: 0.5em; /* Espaciado interno */
+    border: 2px solid #4576b1; /* Borde azul */
+    transition: border-color 250ms, background-color 250ms; /* Transición suave */
+}
+
+.footer-distributed .button_enviar:hover {
+    background-color: #4576b1; /* Cambio de color en hover */
+}
+
+/* Custom Alert Styles */
+#custom-alert {
+    position: fixed; /* Posicionamiento fijo */
+    top: 10vh; /* Espaciado desde la parte superior */
+    left: 30vw; /* Espaciado desde la izquierda */
+    right: 30vw; /* Espaciado desde la derecha */
+    background-color: #4576b1; /* Fondo azul */
+    color: #0A3871; /* Color del texto */
+    font-size: 18px; /* Tamaño de la fuente */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #0A3871; /* Borde azul */
+    border-radius: 5px; /* Bordes redondeados */
+    text-align: center; /* Alineación del texto al centro */
+    font-weight: bolder; /* Peso de la fuente */
+    display: none; /* Oculto por defecto */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1400px) {
+    main .container {
+        width: 50vw; /* Ajuste del ancho en pantallas pequeñas */
+    }
+
+    main .result {
+        width: 40vw; /* Ajuste del ancho en pantallas pequeñas */
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .main {
+        flex-direction: column; /* Alineación en columna */
+        max-height: inherit; /* Altura máxima heredada */
+    }
+
+    .main .logo,
+    .main .container,
+    .main .output_text {
+        width: 100%; /* Ancho completo */
+    }
+
+    .main .logo {
+        justify-content: flex-start; /* Alineación al inicio del contenedor */
+    }
+
+    main .logo img {
+        padding-left: 2em; /* Espaciado izquierdo de la imagen */
+    }
+
+    main .container {
+        padding-top: 5vh; /* Espaciado superior */
+    }
+
+    main .container .input_text {
+        width: 100%; /* Ancho completo */
+        padding: 2em; /* Espaciado interno */
+    }
+
+    main .container .input_text textarea {
+        height: 50vh; /* Altura del área de texto */
+        width: 90%; /* Ancho del área de texto */
+    }
+
+    main .output_text {
+        margin: 0; /* Sin margen */
+    }
+
+    main .output_text .result {
+        width: 100%; /* Ancho completo */
+        display: flex;
+        justify-content: center; /* Centrando el contenido horizontalmente */
+        align-items: center; /* Centrando el contenido verticalmente */
+        margin: 2em; /* Espaciado */
+        height: auto; /* Altura automática */
+        overflow: hidden; /* Oculta el contenido desbordado */
+    }
+
+    main .result .result_output .result_decrypt {
+        overflow-y: auto; /* Desplazamiento vertical */
+        max-height: 25vh; /* Altura máxima */
+        margin: 2.5em; /* Margen */
+    }
+
+    main .result .no_output img {
+        display: none; /* Oculta la imagen si no hay salida */
+    }
+
+    main .buttons {
+        display: flex;
+        flex-direction: column; /* Alineación en columna */
+        gap: 1em; /* Espaciado entre botones */
+    }
+
+    .footer-distributed {
+        font: bold 12px sans-serif; /* Tamaño de la fuente reducido */
+        padding: 1em 2.5em 0.5em; /* Ajuste del espaciado interno */
+    }
+
+    .footer-distributed h3 {
+        font: normal 2.5vh 'Roboto', cursive; /* Tamaño de la fuente reducido */
+        margin: 0 0 10px; /* Margen inferior */
+    }
+
+    .footer-distributed .footer-company-name {
+        font-size: 2vh; /* Tamaño de la fuente reducido */
+    }
+
+    .footer-distributed .footer-icons a {
+        display: inline-block; /* Alineación en línea */
+        width: 20%; /* Ancho de los íconos */
+        height: 10%; /* Altura de los íconos */
+        cursor: pointer; /* Cursor de puntero */
+        background-color: #F3F5FC; /* Fondo claro */
+        border-radius: 0.1em; /* Bordes redondeados */
+        font-size: 2em; /* Tamaño de la fuente */
+        color: #0A3871; /* Color del texto */
+        text-align: center; /* Alineación del texto al centro */
+        padding: 0.2em; /* Espaciado interno */
+        margin: 0 0.5em 0.1em 0; /* Espaciado entre íconos */
+    }
+
+    .footer-distributed form input,
+    .footer-distributed form textarea {
+        width: 30vh; /* Ancho reducido de los campos de formulario */
+    }
+
+    .footer-distributed .footer-right p {
+        margin: 1.5em 1em 0 0; /* Margen */
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .main {
+        flex-direction: column; /* Alineación en columna */
+        max-height: inherit; /* Altura máxima heredada */
+    }
+
+    .main .logo,
+    .main .container,
+    .main .result {
+        width: 100%; /* Ancho completo */
+    }
+
+    .main .logo {
+        justify-content: flex-start; /* Alineación al inicio del contenedor */
+    }
+
+    main .logo {
+        width: 5vh; /* Tamaño reducido del logo */
+        padding-top: 1em; /* Espaciado superior */
+    }
+
+    .main .logo img {
+        padding-left: 2em; /* Espaciado izquierdo de la imagen */
+    }
+
+    .main .container {
+        padding-top: 2vh; /* Espaciado superior reducido */
+    }
+
+    .main .container .input_text {
+        width: 100%; /* Ancho completo */
+        padding: 1em 2em 1em; /* Espaciado interno */
+    }
+
+    .main .container .input_text textarea {
+        height: 20vh; /* Altura reducida del área de texto */
+    }
+
+    .main .result .result {
+        width: 100%; /* Ancho completo */
+        margin: 2em; /* Margen */
+        height: auto; /* Altura automática */
+        overflow: hidden; /* Oculta el contenido desbordado */
+    }
+
+    .main .result .result .result_output .result_decrypt {
+        overflow-y: auto; /* Desplazamiento vertical */
+        max-height: 30vh; /* Altura máxima */
+        margin: 2.5em; /* Margen */
+    }
+
+    .main .result .result .result_output {
+        font-weight: 400; /* Peso de la fuente */
+        padding: 1em; /* Espaciado interno */
+        height: 70%; /* Altura del contenedor */
+    }
+
+    main .result .no_output img {
+        display: none; /* Oculta la imagen si no hay salida */
+    }
+
+    main .buttons {
+        display: flex;
+        flex-direction: column; /* Alineación en columna */
+        gap: 1em; /* Espaciado entre botones */
+    }
+
+    .footer-distributed {
+        font: bold 12px sans-serif; /* Tamaño de la fuente reducido */
+        padding: 1em 2.5em; /* Ajuste del espaciado interno */
+        margin-top: 6vh; /* Espaciado superior */
+    }
+
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-right {
+        float: none; /* Sin flotación */
+        max-width: 90%; /* Ancho máximo */
+        margin: 0 auto; /* Centrado */
+    }
+
+    .footer-distributed .footer-company-name {
+        font-size: 8px; /* Tamaño de la fuente reducido */
+    }
+
+    .footer-distributed .footer-icons a {
+        display: inline-block; /* Alineación en línea */
+        width: 20%; /* Ancho de los íconos */
+        height: 20%; /* Altura de los íconos */
+        cursor: pointer; /* Cursor de puntero */
+        background-color: #F3F5FC; /* Fondo claro */
+        border-radius: 0.1em; /* Bordes redondeados */
+        font-size: 2em; /* Tamaño de la fuente */
+        color: #0A3871; /* Color del texto */
+        text-align: center; /* Alineación del texto al centro */
+        padding: 0.2em; /* Espaciado interno */
+        margin: 0 0.2em 0.1em 0; /* Espaciado entre íconos */
+    }
+
+    .footer-distributed form input,
+    .footer-distributed form textarea {
+        width: 80%; /* Ancho aumentado de los campos de formulario */
+    }
+
+    .footer-distributed .footer-company-name {
+        font-size: 1em; /* Tamaño de la fuente */
+    }
+
+    .footer-distributed .footer-right p {
+        margin: 1em 1em 0 0; /* Margen */
+    }
+
+    .footer-distributed .button_enviar {
+        float: left; /* Alineación a la izquierda */
+        font-weight: 2em; /* Peso de la fuente (necesario ajustar) */
+    }
+}
